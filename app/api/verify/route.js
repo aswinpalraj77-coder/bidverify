@@ -4,7 +4,7 @@ import { supabase } from "../../../lib/supabaseClient";
 
 // Initialize OpenAI client for NVIDIA endpoints
 const openai = new OpenAI({
-  apiKey: process.env.NVIDIA_API_KEY || process.env.GEMINI_API_KEY,
+  apiKey: process.env.NVIDIA_API_KEY || process.env.GEMINI_API_KEY || "dummy-key-for-build",
   baseURL: process.env.NVIDIA_API_KEY ? "https://integrate.api.nvidia.com/v1" : "https://api.openai.com/v1",
 });
 
